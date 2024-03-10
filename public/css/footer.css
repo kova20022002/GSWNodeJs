@@ -1,0 +1,35 @@
+.footer {
+    background-color: #1d428a;
+    color: #fff;
+    padding: 15vh 0;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    margin-top: 10vh;
+
+}
+.footer-left {
+    text-align: left;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
+}
+
+.footer-text p {
+    font-size: 14px;
+}
+
+.footer-text a {
+    color: #fff;
+    text-decoration: none;
+}

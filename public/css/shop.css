@@ -1,0 +1,140 @@
+
+.sale{
+    background-color: #1d428a;
+    padding-top: 17.5vh;
+    padding-bottom: 2.5vh;
+    border-bottom: 1px solid black;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: aliceblue;
+    text-align: center;
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.15);
+    
+}
+
+
+
+.pom_div {
+    border-bottom: 1px solid #ccc; /* Add bottom border */
+    
+    
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card:not(:nth-child(4n)) {
+    border-right: 1px solid #ccc; /* Add right border to all cards except those at the end of a row */
+    padding-right: 2vw; /* Add padding to shorten the lines */
+}
+
+.card:last-child {
+    border-right: none; /* Remove right border from the last card */
+}
+
+.card_div:nth-last-child(-2+4) {
+    border-bottom: none; /* Remove bottom border from the last row of cards */
+    
+}
+
+
+
+.categories{
+   display: inline-block;
+   margin-left: 15%;
+   font-family: 'Be Vietnam Pro', sans-serif;
+   font-weight: 700;
+   font-size: 2rem;
+   letter-spacing: 0.5vw;
+   margin-bottom: 4% ;
+   margin-top: 2% ;
+   border-bottom: 2px solid #1d428a;
+   
+}
+
+.fir-div:hover, .slika1:hover, .slika2:hover{
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+/*--------------------------------------------------------------------------------------*/
+
+.main-div{
+    margin-left: 15vw;
+    margin-right: 15vw;
+    display:grid;
+    grid-template-columns:  2fr 1.5fr;
+    height:70vh;   
+    column-gap: 2%;
+    padding-bottom: 5%;
+   
+}
+
+
+
+.fir-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-image: url("/images/Nike Stephen Curry Golden State Warriors Royal Jersey.png");
+    height: 100%;
+    
+    background-repeat: no-repeat; 
+    background-size: 85%;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px 10px rgba(0, 0, 0, 0.15);
+    background-position-y: center;
+    background-position-x: center;
+    
+}
+
+
+.sec-div{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    row-gap: 5%;
+    
+}
+
+.slika1 , .slika2{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position-y: center;
+    background-position-x: center;
+    border-radius: 15px;
+    box-shadow: 0px 5px  15px 10px rgba(0, 0, 0, 0.15);
+    
+    
+}
+.slika1{
+    background-image: url("/images/Nike Golden State Warriors Royal Sweatshirt.png");
+    height: 100%;
+
+}
+.slika2{
+    background-image: url("/images/Nike Golden State Warriors T-Shirt.png");
+    height: 100%;
+}
+
+h2{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    vertical-align: bottom;
+    font-size: 1.5rem;
+    letter-spacing: 0.1vw;
+    margin-bottom: 0;
+    margin-left: 5%;
+}
+h3{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    vertical-align: bottom;
+    font-size: 1rem;
+    letter-spacing: 0.1vw;
+    font-weight: 600;
+    margin-top: 0;
+    margin-left: 5%;
+}

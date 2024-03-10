@@ -1,0 +1,172 @@
+
+.card_div{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);    
+    column-gap: 2vw;
+    margin-left: 7%;
+    margin-right: 7%;
+    
+    
+   /*  column-gap: 2vw;
+    row-gap: 10%;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 10%;
+    gap: 2vw; /* Adjust the gap between cards as needed */
+}
+
+.t-shirt{
+    width: 100%;  
+}
+
+
+.card{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    grid-template-rows: auto;
+    padding-top: 5vh;
+    
+}
+
+.card:hover img{
+   transition: 0.3s;
+   opacity: 0.7;
+ 
+}
+
+.item{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+.edition{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: rgb(124, 124, 124);
+    margin-bottom: 0;
+    margin-top: 0.8rem;
+}
+.price{
+    display: inline-block ;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: 600;
+    margin-top: 0.8rem;
+    font-size: large;
+    
+}
+sup{
+    vertical-align:super  ;
+    font-size: smaller;
+    
+}
+
+.divara1{
+    background-color: gray;
+}
+.divara2{
+    background-color: green;
+}
+
+/* -----------------------------------PRODUCT-DETAILS---------------------------------------------------- */
+
+.product-detail{
+    display: flex;
+    flex-direction: row;
+    gap: 5vw;
+    justify-content: center; 
+    margin-top: 10vh;
+    font-family: 'Kanit', sans-serif;
+    
+}
+
+.product-details-photo{
+    max-height: 90vh;
+    
+}
+
+.product-details-photo-div{
+    
+}
+
+.product-details-text{
+    max-width: 30vw;
+}
+
+.product-name{
+    font-weight: 500;
+}
+
+.satifaction{
+    color: green;
+}
+
+.descriptionButton{
+    display: flex;
+    color: gray;
+    border-bottom: 0.5px solid gray;
+    justify-content: space-between;
+    cursor: pointer;
+    margin: 1vh;
+}
+
+.size-price{
+    background-color: #d3d3d3;
+}
+
+/* Hide radio inputs */
+input[type="radio"] {
+    display: none;
+}
+
+/* Style the buttons */
+.size-button {
+    background-color: #e0e0e0;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px; /* Add margin between buttons if needed */
+}
+
+
+
+.size-button.selected {
+    background-color: black;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+.quantity{
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.price-button {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: space-between;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+}
+
+.price {
+    color: #1d428a;
+    font-size: 2rem;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle; /* Vertically align the price */
+}
+
+.button {
+    font-size: 1rem;
+    padding: 0.8rem;
+    background-color: #1d428a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+
+.button:hover {
+    background-color: hsl(220, 60%, 28%);
+}

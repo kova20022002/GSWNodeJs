@@ -1,0 +1,90 @@
+
+<%- include('../includes/head.ejs') %>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+
+    <div class="sale">50% OFF THIS MONTH</div>
+      
+       
+    <% if(product.length = 1) { %>
+        <% for (let products of product){ %>
+<!-- -------------------------------------------------------------------------------------------- -->
+
+    <div class="product-detail">
+        <div class="product-details-photo-div">
+            <img src="/images/<%=products.itemName%>.png" alt="<%= product.itemName %>" class="product-details-photo">
+        </div>
+        <div class="product-details-text">
+            <h1 class="product-name"><%= products.itemName %></h1>
+            <h5 class="satifaction">Secure delivery insured for your satisfaction</h5>
+            
+            <div class="descriptionButton"><p style="display:inline-block; margin: 0;">Description</p><p style="display:inline-block; font-weight:900; margin:0;">+</p></div>
+             <div class="descriptionDropdown" style="display: none;">
+             <p><%= products.description %></p>
+            </div>
+            <div class="descriptionButton"><p style="display:inline-block; margin: 0;">Details</p><p style="display:inline-block; font-weight:900; margin:0;">+</p></div>
+             <div class="descriptionDropdown" style="display: none;">
+                <ul>
+                    <li>Material: 100% Cotton</li>
+                    <li>Officially licensed</li>
+                 </ul>
+            </div>
+
+            <div class="size-price">
+                <div style="padding: 0.8rem;">Size: 
+                    <select id="size" name="size">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                <div class="quantity">Quantity:
+                    <select id="size" name="size">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="price-button"><div class="price"><sup style="vertical-align:text-top; font-size:1.3rem;">$</sup><%= Math.floor(products.price) %><sup style="vertical-align:text-top; font-size:1.3rem;">
+                    <%
+                var price = parseFloat(products.price);
+                var remainder = parseInt((price * 100) % 100);
+                var remainder_str = remainder < 10 ? "0" + remainder : remainder;%>
+              
+              <%= remainder_str %>
+                </sup></div>
+                <div class="add-to-cart" style="display: inline-block;"><button class="button">Add To Cart</button></div>
+                </div>
+                    
+                
+            </div>
+            
+
+            </div>
+        </div>
+        
+
+        <% }} else { %>
+            <h1>No Products Found</h1>
+          <% } %>
+
+          <script src="/javascript/js.js"></script>
+
+    </div>
+
+
+<!-- -------------------------------------------------------------------------------------------- -->
+
+<%- include('../includes/footer.ejs') %>
+    
+</body>
+</html>

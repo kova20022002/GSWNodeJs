@@ -1,0 +1,68 @@
+<%- include('includes/head.ejs') %>
+
+
+<body>
+    <%- include('includes/navigation.ejs') %>
+
+    <h1 class="free_tickets">Get your free tickets by filling out the form with your information</h1>
+        <form method="post" action="">
+            <fieldset class="fieldset">
+                <p>
+                    
+                    <input type="text" class="form_field" id="fname" name="firstName" placeholder="First name"><br>
+                    
+                    <input type="text" class="form_field" id="lname" name="lastName" placeholder="Last name">
+                
+                    <input type="email" class="form_field" id="email" name="email" placeholder="E-mail adress"><br>
+                    
+                
+                <label for="birthday">Date of birth: </label>
+                <input type="date" class="form_field" id="birthday" name="birthday" placeholder="First name"><br>
+                
+                    <label for="gender">Gender: </label>
+                    <p>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male </label>
+                    <input type="radio" id="female" name="gender" value="female" >
+                    <label for="female">Female</label>
+                    </p>
+                </p>
+                    <label for="state">Country: </label>
+                    <select name="state" class="form_field" id="state" placeholder="First name">
+                        <optgroup label="North America">
+                            <option value="usa">USA</option>
+                            <option value="canada">Canada</option>
+                            <option value="mexico">Mexico</option>
+                        </optgroup>
+                        <optgroup label="Europe">
+                            <option value="england">England</option>
+                            <option value="spain">Spain</option>
+                            <option value="france">France</option>
+                            <option value="germany">Germany</option>
+                        </optgroup>
+                        <optgroup label="Asia">
+                            <option value="russia">Russia</option>
+                            <option value="china">China</option>
+                            <option value="japan">Japan</option>
+                            <option value="turkey">Turkey</option>
+                            <option value="saudi_arabia">Saudi Arabia</option>
+                        </optgroup>
+                        <optgroup label="Australia">
+                            <option value="australia">Australia</option>
+                        </optgroup>
+                        <optgroup label="Africa">
+                            <option value="egypt">Egypt</option>
+                            <option value="south_africa">South Africa</option>
+                        </optgroup>
+                    </select>
+                    <p style="display: flex; justify-content: center;">
+                    <input type="submit" id="submit_button" value="Submit">
+                    </p>
+            </fieldset>
+        </form>
+        <%- include('includes/footer.ejs') %>
+
+        <script src="../util/javascript.js"></script>
+
+</body>
+</html>

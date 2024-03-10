@@ -1,0 +1,33 @@
+<%- include('../includes/head.ejs') %>
+
+<body>
+    <%- include('../includes/navigation.ejs') %>
+    <div class="sale">50% OFF THIS MONTH</div>
+      
+    <h1 class="categories">JERSEYS</h1>
+  
+    <div class="card_div">
+      <% if(prods.length > 0) { %>
+        <% for (let product of prods){ %>
+        <a href="/shop/<%= product.id %>" class="card">
+          <img class="t-shirt" src="/images/<%= product.itemName %>.png">
+          <p class="item"><%= product.itemName %></p>
+          <p class="edition"><%= product.edition %></p>
+          <p class="price">$<%= Math.floor(product.price) %><sup><%
+            var price = parseFloat(product.price);
+            var remainder = parseInt((price * 100) % 100);
+            var remainder_str = remainder < 10 ? "0" + remainder : remainder;%>
+          
+          <%= remainder_str %></sup></p>
+          <div class="pom_div"></div>
+        </a>
+        <% }} else { %>
+          <h1>No Products Found</h1>
+        <% } %>
+        
+    </div>
+    
+    <%- include('../includes/footer.ejs') %>
+
+</body>
+</html>

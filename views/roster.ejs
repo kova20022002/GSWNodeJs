@@ -1,0 +1,49 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+    <%- include('includes/navigation.ejs') %>
+
+    <p style="margin-top: 18vh; font-size: 3rem;text-align: center; font-family: 'Roboto', sans-serif;;">Players</p>
+    <div class="roster">
+
+        <% if(player.length > 0) { %>
+            <% for( let pl of player) { %>
+    <div class="players">        
+    <div class="number"><%= pl.number %></div>
+    <div class="name"><%= pl.name %></div>
+    <div class="additional-details">
+    <div class="position">
+        <span style="font-weight:700;">Position: </span> 
+        <span style="font-size: x-large;"><%= pl.position %></span>
+    </div>
+    <div class="height">
+        <span style="font-weight:700;">Height: </span> 
+        <span style="font-size: x-large;"><%= pl.height %></span>
+    </div>
+    <div class="weight">
+        <span style="font-weight:700;">Weight: </span> 
+        <span style="font-size: x-large;"><%= pl.weight %></span>
+    </div>
+    <div class="age">
+        <span style="font-weight:700;">Age: </span> 
+        <span style="font-size: x-large;"><%= pl.age %></span>
+    </div>
+    <div class="country">
+        <span style="font-weight:700;">Country: </span> 
+        <span style="font-size: x-large;"><%= pl.country %></span>
+    </div>
+    </div>
+    <div class="photo_div">
+        <img class="photo" src="/images/<%= pl.name%>.avif">
+     </div>
+</div>
+<% }}else { %>
+    <h1>No Players Found</h1>
+    <% } %>
+</div>
+
+<%- include('includes/footer.ejs') %>
+
+</body>
+
+</html>
