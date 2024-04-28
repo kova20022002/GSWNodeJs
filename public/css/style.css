@@ -88,13 +88,14 @@ body{
       left: 0;
       right:0;
       top: 0;
+     
       background-color: /*#1d428a */rgb(255, 198, 0)  ;
       height: 15vh;
       display: flex;
       flex-direction: row;
       align-items: center;
       border-bottom: 3px solid black;
-      z-index: 1;
+      z-index: 3;
       font-size: large;
       box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.15);
     }
@@ -121,7 +122,6 @@ body{
   
   .nav_buttons{
   flex: 1.4 ;
-  
   font-family: 'Kanit', sans-serif;
   background-color: rgb(255, 198, 0);
   font-weight: 700;
@@ -172,6 +172,26 @@ body{
   .nav_buttons:hover{
     color: #1d428a;
     
+  }
+
+  #cart_icon{
+    height: 4.3vh;
+  }
+
+  .cart-counter {
+    position: absolute;
+    background-color: red;
+    margin-left: 15px;
+    margin-top: -43px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    color: white;
+    padding: 5px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .first_pic{

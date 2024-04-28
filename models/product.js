@@ -37,8 +37,7 @@ const Product = sequelize.define('product', {
     defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
   }
 
-  }
-)
+  });
 
 module.exports = Product;
 

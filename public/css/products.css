@@ -3,8 +3,11 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);    
     column-gap: 2vw;
+    row-gap: 4%;
     margin-left: 7%;
     margin-right: 7%;
+    padding-bottom: 10%;
+
     
     
    /*  column-gap: 2vw;
@@ -77,6 +80,7 @@ sup{
     margin-top: 10vh;
     font-family: 'Kanit', sans-serif;
     
+    
 }
 
 .product-details-photo{
@@ -111,6 +115,9 @@ sup{
 
 .size-price{
     background-color: #d3d3d3;
+    padding-bottom: 5%;
+    padding-top: 6%;
+    
 }
 
 /* Hide radio inputs */
@@ -146,6 +153,7 @@ input[type="radio"] {
     justify-content: space-between;
     padding-left: 3rem;
     padding-right: 3rem;
+    margin-top: 7%;
 
 }
 

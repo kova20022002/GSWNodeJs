@@ -1,0 +1,101 @@
+.cart_div{
+    display: flex;
+      flex-direction: row;
+      gap: 5vw;
+      justify-content: center; 
+      margin-top: 5vh;
+      font-family: 'Kanit', sans-serif;
+  }
+  
+  .cart_items{
+    display:flex;
+    flex-direction: column;
+  
+  }
+  
+
+  .delete-button{
+    font-size: 1rem;
+    padding: 0.8rem;
+    background-color: #990000;
+    color: white;
+    border: none;
+    width: 8vw;
+    border-radius: 4px;
+
+  }
+  
+  .content_single_item{
+    display:flex;
+    flex-direction: row;
+    border-bottom: 1px solid #ccc;
+    width: 50vw;
+    margin-bottom: 5vh;
+    padding-bottom: 5vh;
+  }
+
+  .content_text{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 1rem;
+  }
+  
+  .payout_options{
+    padding: 3vw;
+    width: 20vw;
+    height: 45vh;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+  }
+
+  #price_div{
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+    border-top: 1px solid #ccc;
+    font-weight: 500;
+  }
+  
+#no_items_div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#protection{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+  .button {
+    font-size: 1rem;
+    padding: 0.8rem;
+    background-color: #1d428a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    
+  }
+  
+  .image{
+    width:30%;
+    
+  }
+
+  .cart_heading{
+   display: inline-block;
+   margin-left: 15%;
+   font-family: 'Be Vietnam Pro', sans-serif;
+   font-weight: 700;
+   font-size: 2rem;
+   letter-spacing: 0.5vw;
+   margin-bottom: 4% ;
+   margin-top: 20vh;
+   border-bottom: 2px solid #1d428a;
+  }

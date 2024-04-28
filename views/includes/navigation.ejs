@@ -10,16 +10,48 @@
   <a class="nav_buttons" href="/fixtures">FIXTURES</a>
   <a class="nav_buttons" href="/match_history">MATCH HISTORY</a>
   <div class="nav_buttons dropdown">
-    <a class="nav_buttons" href="/shop">SHOP</a>
+  <a class="nav_buttons" href="/shop">SHOP
     <div class="dropdown-content">
-      <a href="#">Cart</a>
       <a href="/shop/jerseys">Jerseys</a>
       <a href="/shop/t-shirts">T-Shirts</a>
       <a href="/shop/sweatshirts">Sweatshirts</a>
     </div>
+  </a>
+  </div>
+  <% if (isAuthenticated) { %>
+    <a class="nav_buttons" href="/cart">
+      <img id="cart_icon" src="/images/cart.png">
+      <span class="cart-counter"></span>
+    </a>
+    <% } %>
+    <% if (!isAuthenticated) { %>
+    <a class="nav_buttons" href="/login">LOGIN</a>
+    <a class="nav_buttons" href="/signup">SIGNUP</a>
+
+    <% }else { %>
+    <form action="/logout" method="POST">
+    <button class="nav_buttons" type="submit">LOGOUT</button>
+    </form>
+    <% } %>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          fetch('/getTotalProducts')
+              .then(response => response.json())
+              .then(data => {
+                  const totalProducts = data.totalProducts;
+                  const cartCounter = document.querySelector('.cart-counter');
+                  if (cartCounter) {
+                     if (totalProducts === 0) {
+                      cartCounter.style.display = 'none';
+                    }
+                      cartCounter.textContent = totalProducts;
+                  }
+              })
+              .catch(error => console.error('Error fetching total products:', error));
+      });
+  </script>
+    
   
-  <label id="themeSwitch" class="switch">
-      <input id="themeCheckbox" type="checkbox">
-      <span class="slider round"></span>
-  </label>
+  
 </nav>

@@ -1,0 +1,60 @@
+<%- include('includes/head.ejs') %>
+
+<body>
+
+    <%- include('includes/navigation.ejs') %>
+
+    <h1 class="cart_heading">Your Items</h1>
+    <div class="cart_div">
+        <% if(products.length > 0) { %>
+            <div class="cart_items">
+                <% for (let p of products){ %>
+                    <div class="content_single_item">
+                        <img class="image" src="/images/<%= p.itemName %>.png"> 
+                            <div class="content_text">
+                            <h3><%= p.itemName %></h3>
+                            <p>Quantity: <b><%= p.cartItem.quantity %></b></p>
+                            
+                            <form style="display:flex; justify-content: space-between;" action="/cart-delete" method="post">
+                                <p style="display: inline-block;">Size: <b><%= p.cartItem.size %></b></p>
+                                <button class="delete-button">Delete</button>
+                                <input type="hidden" name="productId" value="<%= p.id %>">
+                            </form>
+                            </div>
+                        
+                    </div>
+                <% } %>
+            </div>
+        <% } else { %>
+            <h1 style="width: 50vw;display: flex; justify-content: center;">No Products Found</h1>
+        <% } %>
+    
+        <div class="payout_options">
+            <div id="no_items_div">
+               <p>Items (<%= totalProducts %>)</p>
+               <p style="display: inline-block;">$<%= totalPrice %></p>
+            </div>
+            <div id="no_items_div">
+                <p>Shipping</p>
+                <p style="display: inline-block;">Free</p>
+            </div>
+            <div id="price_div">
+              <p style="display: inline-block;">Subtotal</p>
+              <p style="display: inline-block;">$<%= totalPrice %></p>
+            </div>
+            <form action="/order" method="POST">
+              <button class="button">Order Now</button>
+            </form>
+            <div id="protection">
+                <p style="font-size: x-large; color: green; margin: 0;">&#x1F6E1; </p>
+                <p style="display:inline-block; font-size: small; margin: 0;">Purchase protected by GSW Shop</p>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <%- include('includes/footer.ejs') %>
+    
+</body>
+</html>

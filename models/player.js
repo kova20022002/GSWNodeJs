@@ -45,7 +45,6 @@ const Player = sequelize.define('player', {
     defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
   }
 
-  }
-)
+  });
 
 module.exports = Player;
